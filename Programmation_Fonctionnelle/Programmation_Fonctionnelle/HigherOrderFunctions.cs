@@ -3,11 +3,11 @@ using System;
 
 namespace Programmation_Fonctionnelle
 {
-    public class HigherOrderFunctions
+    public static class HigherOrderFunctions
     {
         public const string FirstName = "Benoit";
         public const string LastName = "pegaz";
-        public static void Main()
+        public static void Run()
         {
             Copyright.print("Fonction d'ordre supérieur/ Higher-order function",
                 "Une fonction d'ordre supérieure est une fonction qui prend et/ou renvoie une fonction",
@@ -15,8 +15,6 @@ namespace Programmation_Fonctionnelle
 
             string res = PrintHelloText(FormatName);
             Console.WriteLine(res);
-
-            Console.ReadLine();
         }
 
         /// <summary>
@@ -25,7 +23,7 @@ namespace Programmation_Fonctionnelle
         /// <param name="firstName">Le prénom de l'utilisateur</param>
         /// <param name="lastName">Le nom de l'utilisateur</param>
         /// <returns>Une chaine de caractère avec le prénom suivi du nom en majuscule</returns>
-        public static string FormatName(string firstName, string lastName)
+        private static string FormatName(string firstName, string lastName)
         {
             return $"{firstName} {lastName.ToUpper()}";
         }
@@ -37,7 +35,7 @@ namespace Programmation_Fonctionnelle
         /// <param name="firstName">Le prénom de l'utilisateur</param>
         /// <param name="lastName">Le nom de l'utilisateur</param>
         /// <returns>Retourne une chaine de caractère comportant le message officiel</returns>
-        public static string PrintHelloText(Func<string, string, string> formatName)
+        private static string PrintHelloText(Func<string, string, string> formatName)
         {
             return $"Welcome in our community {formatName(FirstName, LastName)}!";
         }
