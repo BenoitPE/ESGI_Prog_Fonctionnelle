@@ -18,9 +18,8 @@ namespace Programmation_Fonctionnelle
                 Console.WriteLine("\t- 6: Composition Over inheritance");
                 Console.WriteLine("\t- 7: Séparation entre domaines purs et impurs");
                 Console.WriteLine(">--------------------------------------------<");
-                
-                int value = 0;
-                if (!int.TryParse(Console.ReadLine(), out value))
+
+                if (!int.TryParse(Console.ReadLine(), out int value))
                     Environment.Exit(0);
 
                 Console.Clear();
@@ -44,6 +43,9 @@ namespace Programmation_Fonctionnelle
                         break;
                     case 5:
                         CompositionOfFunctions.Run();
+                        break;
+                    case 6:
+                        CompositionOverInheritance.Run();
                         break;
                 }
                 Console.WriteLine("\n<Appuyez sur une touche pour revenir au menu>");

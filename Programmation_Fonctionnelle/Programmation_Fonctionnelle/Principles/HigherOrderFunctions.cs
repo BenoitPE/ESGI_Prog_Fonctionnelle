@@ -1,5 +1,4 @@
 ﻿using Programmation_Fonctionnelle.Common;
-using System;
 
 namespace Programmation_Fonctionnelle.Principles
 {

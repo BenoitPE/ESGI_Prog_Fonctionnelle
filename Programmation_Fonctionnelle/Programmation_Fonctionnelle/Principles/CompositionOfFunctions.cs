@@ -30,7 +30,7 @@ Multiply(a, AddOne(ref b)) est une composition de fonction pure et impure");
         /// <returns>Le résultat du paramètre d'entrée + 1</returns>
         public static int AddOne(ref int value)
         {
-            value = value + 1;
+            value = value++;
             return value;
         }
 
