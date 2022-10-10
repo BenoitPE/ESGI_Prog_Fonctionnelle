@@ -1,4 +1,6 @@
-﻿namespace Programmation_Fonctionnelle
+﻿using Programmation_Fonctionnelle.Principles;
+
+namespace Programmation_Fonctionnelle
 {
     public class Program
     {
@@ -18,7 +20,7 @@
                 Console.WriteLine(">--------------------------------------------<");
                 
                 int value = 0;
-                if (int.TryParse(Console.ReadLine(), out value))
+                if (!int.TryParse(Console.ReadLine(), out value))
                     Environment.Exit(0);
 
                 Console.Clear();
@@ -37,7 +39,9 @@
                     case 3:
                         Idempotency.Run();
                         break;
-
+                    case 4:
+                        Immutability.Run();
+                        break;
                 }
                 Console.WriteLine("\nAPPUYEZ SUR ENTRER POUR REVENIR AU MENU");
                 Console.ReadLine();

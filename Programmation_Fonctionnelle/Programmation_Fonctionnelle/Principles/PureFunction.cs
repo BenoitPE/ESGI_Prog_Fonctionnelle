@@ -1,6 +1,6 @@
 ﻿using Programmation_Fonctionnelle.Common;
 
-namespace Programmation_Fonctionnelle
+namespace Programmation_Fonctionnelle.Principles
 {
     public static class PureFunction
     {

@@ -1,7 +1,7 @@
 ﻿using Programmation_Fonctionnelle.Common;
 using System;
 
-namespace Programmation_Fonctionnelle
+namespace Programmation_Fonctionnelle.Principles
 {
     public static class HigherOrderFunctions
     {
