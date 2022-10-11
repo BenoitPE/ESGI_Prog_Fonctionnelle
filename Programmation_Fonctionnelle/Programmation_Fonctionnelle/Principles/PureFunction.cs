@@ -8,7 +8,7 @@ namespace Programmation_Fonctionnelle.Principles
         {
             Copyright.print("Fonction pure",
                 "Une fonction pure est une fonction sans effet de bord, qui s'occupe uniquement de renvoyer une valeur, ne dépend que de ses paramètres d'entrée sans les modifier",
-                "Ici Multiply() est une fonction pure car elle n'a pas d'effet de bord, elle retourne une valeur et ne modifie par les paramètres d'entrée");
+                "Ici Multiply() est une fonction pure car elle n'a pas d'effet de bord, elle retourne une valeur et ne modifie pas les paramètres d'entrée");
             int a = 3;
             int b = 4;
             Console.WriteLine($"a = {a}");

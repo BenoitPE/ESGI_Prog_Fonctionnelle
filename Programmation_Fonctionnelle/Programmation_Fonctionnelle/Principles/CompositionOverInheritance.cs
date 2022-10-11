@@ -40,7 +40,8 @@ namespace Programmation_Fonctionnelle.Principles
         {
             Copyright.print("Composition Over Inheritance",
     "La composition plutôt que l'héritage est le fait d'éviter d'utiliser l'héritage et de favoriser la composition",
-    "Dans notre cas, ici nous pouvons voir une composition entre les classes Company et DigitalServicesCompany");
+    @"Dans notre cas, ici nous pouvons voir une composition entre les classes Company et DigitalServicesCompany 
+(au lieu que DigitalServicesCompany hérite de Company)");
 
             DigitalServicesCompany digitalServicesCompany = new DigitalServicesCompany(new Company("ESN", 50), 10);
             Console.WriteLine(digitalServicesCompany.ToString());

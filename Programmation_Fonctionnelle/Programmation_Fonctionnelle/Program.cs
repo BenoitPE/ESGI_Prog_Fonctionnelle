@@ -8,7 +8,7 @@ namespace Programmation_Fonctionnelle
         {
             while (true)
             {
-                Console.WriteLine(">--------------------------------------------<");
+                Console.WriteLine(">------------------------------------------------------------<");
                 Console.WriteLine("Veuillez sélectionner un principe de Programmation fonctionnelle");
                 Console.WriteLine("\t- 1: Fonction d'ordre supérieur");
                 Console.WriteLine("\t- 2: Fonction pure");
@@ -17,7 +17,7 @@ namespace Programmation_Fonctionnelle
                 Console.WriteLine("\t- 5: Composition de fonction (pure et impure)");
                 Console.WriteLine("\t- 6: Composition Over inheritance");
                 Console.WriteLine("\t- 7: Séparation entre domaines purs et impurs");
-                Console.WriteLine(">--------------------------------------------<");
+                Console.WriteLine(">------------------------------------------------------------<");
 
                 if (!int.TryParse(Console.ReadLine(), out int value))
                     Environment.Exit(0);
@@ -51,7 +51,7 @@ namespace Programmation_Fonctionnelle
                         SeparationBetweenPureAndImpureDomain.Run();
                         break;
                 }
-                Console.WriteLine("\n<Appuyez sur une touche pour revenir au menu>");
+                Console.WriteLine("\n<Appuyez sur une ENTRER pour revenir au menu>");
                 Console.ReadLine();
                 Console.Clear();
             }

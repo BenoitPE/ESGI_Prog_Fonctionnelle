@@ -1,11 +1,12 @@
 ﻿using Programmation_Fonctionnelle.Common;
+using Programmation_Fonctionnelle.Principles.SeperationPureImpure.Controllers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Programmation_Fonctionnelle.Principles
+namespace Programmation_Fonctionnelle.Principles.SeperationPureImpure.Business
 {
     /// <summary>
     /// ComptabilityService est une simulation d'un service pur. Nous ne tenons pas compte du Console.WriteLine() qui est seulement présent pour illustrer notre exemple
@@ -38,7 +39,9 @@ namespace Programmation_Fonctionnelle.Principles
             return salary;
         }
     }
-
+}
+namespace Programmation_Fonctionnelle.Principles.SeperationPureImpure.Data
+{
     /// <summary>
     /// ExportService est une simulation d'un service impur car dépendant d'une librairie externe qui peut créer des effets de bord.
     /// </summary>
@@ -62,6 +65,12 @@ namespace Programmation_Fonctionnelle.Principles
             Console.WriteLine("Nous simulons un export au format CSV à l'aide d'une librairie externe");
         }
     }
+}
+
+namespace Programmation_Fonctionnelle.Principles.SeperationPureImpure.Controllers
+{
+    using Programmation_Fonctionnelle.Principles.SeperationPureImpure.Business;
+    using Programmation_Fonctionnelle.Principles.SeperationPureImpure.Data;
 
     public class ComptabilityController
     {
@@ -96,19 +105,23 @@ namespace Programmation_Fonctionnelle.Principles
             ExportService.SaveAsCsv(salary.ToString());
         }
     }
+}
 
+namespace Programmation_Fonctionnelle.Principles
+{
     public static class SeparationBetweenPureAndImpureDomain
     {
         public static void Run()
         {
             Copyright.print("Séparation entre domaine pure et impur",
-                details: @"Ici notre séparation se fait dans les services, le service ComptabilityService contient du code métier pur
-ExportService appelle une librairie afin d'exporter en plusieurs format, Export service est du code impur");
+                details: @"Ici notre séparation se fait dans les namespaces:
+- Business contient du code métier pur
+- Data contient la gestion de l'export et l'accès aux données, domaine impure
+- Controllers appelle des fonctions pures et impures");
 
             ComptabilityController comptabilityController = new ComptabilityController();
             comptabilityController.CalculateHourlyRateAndExportAsPdf(3034, 151.7);
             comptabilityController.CalculateSalaryAndExportAsCsv(151.7, 20);
         }
-
     }
 }

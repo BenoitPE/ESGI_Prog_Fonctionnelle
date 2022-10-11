@@ -8,8 +8,9 @@ namespace Programmation_Fonctionnelle.Principles
         {
             Copyright.print("Composition de fonctions (pures et impure)",
                 "La composition de deux fonctions est l'application de la première fonction au résultat de l'application de la seconde",
-                @"Ici AddOne() est une fonction impure car elle modifie la valeur du paramètre d'entrée
-Multiply() est une fonction pure car elle ne crée pas d'effet de bord et ne modifie pas les paramètres d'entrées
+                @"
+- AddOne() est une fonction impure car elle modifie la valeur du paramètre d'entrée
+- Multiply() est une fonction pure car elle ne crée pas d'effet de bord et ne modifie pas les paramètres d'entrées
 Multiply(a, AddOne(ref b)) est une composition de fonction pure et impure");
 
             int a = 3;
@@ -30,7 +31,7 @@ Multiply(a, AddOne(ref b)) est une composition de fonction pure et impure");
         /// <returns>Le résultat du paramètre d'entrée + 1</returns>
         public static int AddOne(ref int value)
         {
-            value = value++;
+            value++;
             return value;
         }
 
