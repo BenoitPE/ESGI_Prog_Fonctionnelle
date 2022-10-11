@@ -47,6 +47,9 @@ namespace Programmation_Fonctionnelle
                     case 6:
                         CompositionOverInheritance.Run();
                         break;
+                    case 7:
+                        SeparationBetweenPureAndImpureDomain.Run();
+                        break;
                 }
                 Console.WriteLine("\n<Appuyez sur une touche pour revenir au menu>");
                 Console.ReadLine();
