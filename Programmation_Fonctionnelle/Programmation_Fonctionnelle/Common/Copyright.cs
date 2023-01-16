@@ -10,7 +10,7 @@ namespace Programmation_Fonctionnelle.Common
     {
         public static void print(string principle, string? description = null, string? details = null)
         {
-            ConsoleColor consoleColor = ConsoleColor.Blue;
+            ConsoleColor consoleColor = ConsoleColor.Green;
             Console.WriteLine(">--------------------------------------------<");
 
             Console.Write("Author: ");
