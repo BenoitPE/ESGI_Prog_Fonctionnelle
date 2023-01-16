@@ -16,9 +16,6 @@ namespace Programmation_Fonctionnelle.Principles
             Console.WriteLine($"a * b = {Multiply(a, b)}");
         }
 
-        public static int Multiply(int a, int b)
-        {
-            return a * b;
-        }
+        public static Func<int, int, int> Multiply = (a, b) => a * b;
     }
 }
